@@ -1,6 +1,6 @@
-# HTS — Tiny Shell
+# HTS
 
-A minimal, experimental shell implemented in Python for learning and prototyping.
+A minimal, experimental shell implemented in Python for learning and prototyping how a shell (like ZSH, bash or shell) actually works in the real world
 
 ## Overview
 
@@ -8,13 +8,13 @@ A minimal, experimental shell implemented in Python for learning and prototyping
 
 ## Features
 
-- Builtins: `exit [code]`, `echo`
+- Builtins: `exit [code]`, `echo`, `cd [dest]`, `type [command]`
 - Executes external programs using `subprocess.run`
 - Robust prompt handling and basic parse-error reporting using `shlex`
 
 ## Requirements
 
-- Python 3.8+ (the repository includes a `env/` virtual environment; use it if you want)
+- Python 3.8+
 
 ## Run
 
@@ -35,15 +35,10 @@ $ echo hello world
 hello world
 ... (external command output)
 $ exit 0
+$ cd app/
+$ type ls
 ```
 
-## Notes & Next Steps
-
-- Add `readline` for history and line editing.
-- Implement I/O redirection (`>`, `<`) and piping (`|`) via `subprocess.Popen`.
-- Add job control and background execution (`&`).
-- Add unit tests for builtins and command execution.
-- Consider reorganizing into a `Shell` class for easier extension and testing.
 
 ## Contributing
 
